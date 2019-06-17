@@ -1,0 +1,28 @@
+@import '../../vars.scss';
+
+header {
+  .sticky{
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    z-index: 10;
+    background-color: $bkg_card;
+  }
+
+  nav {
+    width: 100%;
+    background-color: $card_footer_background;
+    padding: 20px;
+  }
+}
+@media only screen and (max-device-width: 700px) {
+  header {
+    nav {
+      div {
+        img {
+          width: 50%;
+        }
+      }
+    }
+  }
+}
