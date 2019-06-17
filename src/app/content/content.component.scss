@@ -47,6 +47,18 @@
       }
 
       .box-component {
+        .temperature-first {
+          color: $title_temperature_first;
+        }
+
+        .temperature-second {
+          color: $title_temperature_second;
+        }
+
+        .temperature-third {
+          color: $title_temperature_third;
+        }
+
         h3 {
           font-size: 70px;
           font-weight: normal;
@@ -95,31 +107,6 @@
           text-align: center;
           font-size: 10px;
           color: $second_title;
-        }
-      }
-
-      &:nth-child(3n+1) {
-        .box-component {
-          h3 {
-            color: $title_temperature_first;
-          }
-        }
-      }
-
-
-      &:nth-child(3n+2) {
-        .box-component {
-          h3 {
-            color: $title_temperature_second;
-          }
-        }
-      }
-
-      &:nth-child(3n+3) {
-        .box-component {
-          h3 {
-            color: $title_temperature_third;
-          }
         }
       }
     }

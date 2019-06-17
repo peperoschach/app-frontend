@@ -5,7 +5,9 @@
         <h2>{{nuukContentData?.city.name}}, {{nuukContentData?.city.country}}</h2>
       </div>
       <div class="box-component">
-        <h3>{{nuukTemperature}}º</h3>
+        <h3 [ngClass]="{'temperature-first' : nuukTemperature <= 4, 'temperature-second' : nuukTemperature > 5, 'temperature-third': nuukTemperature > 25}">
+          {{nuukTemperature}}º
+        </h3>
       </div>
       <div class="footer-component">
         <p>Updated at 02:48:32PM</p>
@@ -17,7 +19,9 @@
         <h2>{{urubiciContentData?.city.name}}, {{urubiciContentData?.city.country}}</h2>
       </div>
       <div class="box-component">
-        <h3>{{urubiciTemperature}}º</h3>
+        <h3 [ngClass]="{'temperature-first' : urubiciTemperature <= 4, 'temperature-second' : urubiciTemperature > 5, 'temperature-third': urubiciTemperature > 25}">
+          {{urubiciTemperature}}º
+        </h3>
       </div>
       <div class="footer-component">
         <table>
@@ -30,7 +34,7 @@
           <tbody>
             <tr>
               <td>{{urubiciHumidity}}%</td>
-              <td>{{UrubiciPressure}}hPa</td>
+              <td>{{urubiciPressure}}hPa</td>
             </tr>
           </tbody>
         </table>
@@ -43,7 +47,9 @@
         <h2>{{nairobiContentData?.city.name}}, {{nairobiContentData?.city.country}}</h2>
       </div>
       <div class="box-component">
-        <h3>{{nairobiTemperature}}º</h3>
+        <h3 [ngClass]="{'temperature-first' : nairobiTemperature <= 4, 'temperature-second' : nairobiTemperature > 5, 'temperature-third': nairobiTemperature > 25}">
+          {{nairobiTemperature}}º
+        </h3>
       </div>
       <div class="footer-component">
         <p>Updated at 02:48:30PM</p>

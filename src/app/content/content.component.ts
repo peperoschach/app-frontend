@@ -14,7 +14,7 @@ export class ContentComponent implements OnInit {
   public urubiciContentData;
   public urubiciTemperature: number = 0;
   public urubiciHumidity: number = 0;
-  public UrubiciPressure: number = 0;
+  public urubiciPressure: number = 0;
   public urubiciCityId = '3445709'
 
   public nuukContentData;
@@ -38,7 +38,7 @@ export class ContentComponent implements OnInit {
           this.urubiciContentData = data;
           this.urubiciTemperature = this.urubiciContentData.list[0].temp.day.toFixed(0);
           this.urubiciHumidity = this.urubiciContentData.list[0].humidity;
-          this.UrubiciPressure = this.urubiciContentData.list[0].pressure.toFixed(0);
+          this.urubiciPressure = this.urubiciContentData.list[0].pressure.toFixed(0);
           })
 
     interval(100000)
@@ -47,14 +47,14 @@ export class ContentComponent implements OnInit {
         switchMap(() => this.contentService.getCityClimate(this.nuukId))
         )
         .subscribe((data: ContentModel[] ) => {
-            this.nuukContentData = data;
-            this.nuukTemperature = this.nuukContentData.list[0].temp.day.toFixed(0);
-          })
+          this.nuukContentData = data;
+          this.nuukTemperature = this.nuukContentData.list[0].temp.day.toFixed(0);
+        })
 
     interval(100000)
       .pipe(
-        startWith(20),
-        switchMap(() => this.contentService.getCityClimate(this.nuukId))
+        startWith(10),
+        switchMap(() => this.contentService.getCityClimate(this.nairobiId))
         )
         .subscribe((data: ContentModel[] ) => {
             this.nairobiContentData = data;

@@ -1,40 +1,37 @@
-# DockerAngular
+# App-Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+Projeto desenvolvido para mostrar a temperatura de 3 cidades.
 
-## Development server
+Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) versão 6.0.8.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Executando container
 
-## Code scaffolding
+Se você quiser pode inciar o container com a aplicação, para isso basta executar o comando `docker-compose up`. Navegue até `http://localhost:8000/`.
+O aplicativo será recarregado automaticamente se você alterar qualquer um dos arquivos de origem.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Servidor de desenvolvimento
+
+Execute `ng serve` para um servidor dev. Navegue até `http://localhost:4200/`. O aplicativo será recarregado automaticamente se você alterar qualquer um dos arquivos de origem.
+
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Execute `ng build` para construir o projeto. Os artefatos de construção serão armazenados no diretório `dist/`. Use o sinalizador `--prod` para uma construção de produção.
 
-## Running unit tests
+## Execução de testes unitários
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Execute `ng test` para executar os testes unitários via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Executando testes de ponta a ponta
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Execute `ng e2e` para executar os testes de ponta a ponta via [Protractor](http://www.protractortest.org/).
 
-## Further help
+## Gerando a documentação
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Para a gerar a documentação basta executar o comando `npm run compodoc`, a documentação será gerada na raiz da aplicação, dentro do diretório `documentation/`
 
+## Acessando documentação 
 
-docker build -t angular-docker-image .
-
-
-docker run -it -v ${PWD}/usr/src/app -p 4200:4200 angular-docker-image
+Para verificar a documentação basta navegar até o diretório `documentation/`, e abrir o arquivo `index.html` em um navegador.
 
 
-
-
-docker build -t dockerdev .
-
-docker run  -p 8000:4200 dockerdev
